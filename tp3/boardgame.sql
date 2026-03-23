@@ -1,6 +1,14 @@
 DROP TABLE IF EXISTS partie CASCADE;
 DROP TABLE IF EXISTS joueur CASCADE;
 DROP TABLE IF EXISTS demande CASCADE;
+DROP TABLE IF EXISTS test CASCADE;
+
+
+CREATE TABLE test(
+    id serial primary key,
+    a INT,
+    b INT,
+);
 
 CREATE TABLE partie(
 	pid serial primary key,
@@ -46,7 +54,6 @@ INSERT INTO joueur(pseudo) VALUES
 INSERT INTO demande(jid,pid) VALUES
 	(1,8), (2,8),
 	(1,2), (2,2), (3,2);
-
 
 
 
